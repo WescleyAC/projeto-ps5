@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+
+
+
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 9%, rgba(34, 138, 138, 1) 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container {
+
+    width: 80%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden;
+
+
+
+}
+
+.navbar {
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+
+.logo {
+
+
+    width: 50px;
+    margin: 30px 0;
+
+}
+
+
+nav {
+
+
+    width: 100%;
+    text-align: right;
+
+}
+
+
+li {
+
+    display: inline-block;
+    list-style: none;
+    margin-right: 30px;
+
+
+
+}
+
+
+li a {
+
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+
+}
+
+
+li a:hover {
+
+    color: #419a9a;
+
+}
+
+
+.row {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.column-1 {
+
+
+    margin-left: 50px;
+    position: relative;
+}
+
+
+.column-1::before {
+
+    content: "";
+    width: 10px;
+    height: 57%;
+    background: rgb(126, 34, 138);
+    background: radial-gradient(circle, rgba(126, 34, 138, 0.9360119047619048) 89%, rgba(255, 255, 255, 1) 98%);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+
+h2 {
+
+    font-size: 54px;
+}
+
+
+h3 {
+
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0;
+}
+
+
+.column-1 p {
+
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 100;
+
+
+}
+
+
+h4 {
+
+    font-size: 20px;
+    color: #000000;
+    margin: 30px 0;
+}
+
+
+.buy {
+
+    width: 140px;
+    border: none;
+    padding: 12px 10px;
+    outline: none;
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    background: rgb(126, 34, 138);
+    background: radial-gradient(circle, rgba(126, 34, 138, 0.9360119047619048) 89%, 
+    rgba(255, 255, 255, 1) 98%);
+
+    transition: all  0.5s ease-in-out;
+   
+}
+
+
+
+
+.buy img {
+
+    width: 30px;
+    display: none;
+
+}
+
+
+.buy:hover {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+
+}
+
+.buy:hover img {
+
+    display: block;
+}
+
+.add-cart {
+
+    z-index: 2;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+.add-cart img {
+
+    height: 100%;
+    width: 100%;
+    max-width: 55px;
+
+}
+
+
+
+.column-2 {
+
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.controller {
+
+    width: 90%;
+    z-index: 2;
+
+    animation: moveController 2s infinite alternate ease-in-out;
+
+}
+
+.color-box {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: rgb(126, 34, 138);
+    background: radial-gradient(circle, rgba(126, 34, 138, 0.9360119047619048) 89%, rgba(255, 255, 255, 1) 98%);
+    height: 100%;
+    width: 80%;
+
+    border-radius: 20px 0 0 20px;
+    z-index: 1;
+    transform: translateX(150px);
+}
+
+
+.socil-links {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socil-links img {
+
+    height: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.menu-item {
+
+    width: 25px;
+    margin-right: 20px;
+    display: none;
+}
+
+
+@media (max-width: 800px) {
+
+
+    .container {
+
+        height: 100vh;
+        width: 100vw;
+        border-radius: 0;
+        overflow-y: auto;
+
+
+    }
+
+    .row {
+
+        flex-direction: column-reverse;
+    }
+
+
+    .column-2 {
+
+        margin-bottom: 30px;
+    }
+
+    .color-box {
+
+        transform: translateX(70px);
+    }
+
+
+    #menu-list {
+
+        position: relative;
+        top: 60px;
+        left: 60px;
+        overflow: hidden;
+        transition: all 0.8s ease-in-out;
+    }
+
+    .menu-item {
+
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-li {
+
+        display: block;
+        margin-top: 5px;
+
+    }
+
+}
+
+
+@keyframes moveController {
+
+
+    from {
+
+        transform: translate(-5%, -5%) rotate(-5deg);
+    }
+
+}
